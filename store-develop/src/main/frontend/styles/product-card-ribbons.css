@@ -1,0 +1,41 @@
+/* Contenedor para las cintas de oferta */
+.ribbon-container {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    z-index: 1; /* Asegura que esté por encima de la imagen */
+}
+
+/* Estilo base de la cinta */
+.ribbon {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 200px;
+    position: absolute;
+    top: 35px;
+    right: -55px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Color para la cinta de descuento */
+.ribbon-discount {
+    background-color: #E74C3C; /* Rojo */
+}
+
+/* Color para la cinta de promoción */
+.ribbon-promotion {
+    background-color: #3498DB; /* Azul */
+}
+
+/* Color para la cinta de "Nuevo" */
+.ribbon-new {
+    background-color: #2ECC71; /* Verde */
+}

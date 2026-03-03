@@ -1,0 +1,58 @@
+/* Estilos para cada tarjeta de producto */
+.product-card {
+    /* Borde guindo y sombra verde fosforescente */
+    border: 2px solid #800000;
+    box-shadow: 0 0 12px 4px #39ff14;
+
+    border-radius: var(--lumo-border-radius-l);
+    overflow: hidden;
+    background-color: var(--lumo-base-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    /* === LA SOLUCIÓN ESTÁ AQUÍ === */
+    /* Le decimos al Div que se comporte como una columna flexible */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que la tarjeta ocupe todo el espacio de la celda de la cuadrícula */
+}
+
+/* Efecto al pasar el mouse por encima */
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 8px #39ff14;
+}
+
+/* Contenedor de la imagen */
+.product-card-image-container {
+    height: 70%; /* Altura fija para todas las imágenes */
+    width: 100%;
+    flex-shrink: 0; /* Evita que el contenedor de la imagen se encoja */
+}
+
+/* Contenedor de la información (nombre, marca, etc.) */
+.product-card-info {
+    text-align: center;
+    padding: var(--lumo-space-m);
+    /* Hacemos que este contenedor ocupe el espacio restante */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para el nombre del producto */
+.product-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.25rem;
+    color: #FF7043; /* Naranja brillante */
+    text-shadow: 1px 1px 2px #FFF9C4; /* Sombra amarillo claro */
+}
+
+/* Estilos para el precio del producto */
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FF7043; /* Naranja brillante */
+    text-shadow: 1px 1px 2px #FFF9C4; /* Sombra amarillo claro */
+}

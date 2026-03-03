@@ -1,0 +1,40 @@
+/* Contenedor principal para los badges, posicionado sobre la imagen */
+.badge-container {
+    position: absolute;
+    top: 0.5rem; /* 8px desde arriba */
+    left: 0.5rem;  /* 8px desde la izquierda */
+    display: flex;
+    flex-direction: column; /* Apila los badges verticalmente */
+    align-items: flex-start; /* Alinea los badges a la izquierda */
+    gap: 0.25rem; /* Espacio entre los badges */
+    z-index: 1;
+}
+
+/* Estilo base para cada badge */
+.badge {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--lumo-border-radius-m);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+/* Color para el badge de descuento */
+.badge-discount {
+    background-color: #FF5722; /* Naranja fosforescente */
+    color: black;
+}
+
+/* Color para el badge de promoción */
+.badge-promotion {
+    background-color: #00E5FF; /* Celeste fosforescente */
+    color: black;
+}
+
+/* Color para el badge de "Nuevo" */
+.badge-new {
+    background-color: #76FF03; /* Verde fosforescente */
+    color: black;
+}

@@ -1,0 +1,28 @@
+.organizations-view .content {
+    display: flex;
+    height: 100%;
+}
+
+.organizations-view .organizations-grid {
+    flex-grow: 1;
+}
+
+.organizations-view .organization-form {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: none; /* Oculto por defecto */
+    padding: var(--lumo-space-l);
+    border-left: 1px solid var(--lumo-contrast-10pct);
+    width: 25em; /* Mismo ancho que en el código Java */
+}
+
+.organizations-view.editing .organization-form {
+    display: block; /* Visible en modo edición */
+}
+
+/* En pantallas pequeñas, el formulario ocupa todo el ancho al editar */
+@media all and (max-width: 1100px) {
+    .organizations-view.editing .organizations-grid {
+        display: none;
+    }
+}

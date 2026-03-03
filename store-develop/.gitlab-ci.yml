@@ -1,0 +1,45 @@
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+
+image: maven:latest
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .m2/repository
+
+stages:
+  - build
+  - test
+
+mr-build:
+  stage: build
+  allow_failure: false
+  script:
+    - "mvn compile"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+mr-test:
+  stage: test
+  allow_failure: false
+  script:
+    - echo "We will execute the unit tests"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+dev-build:
+  stage: build
+  allow_failure: false
+  script:
+    - "mvn -DskipTests=true compile package"
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'
+
+dev-test:
+  stage: test
+  allow_failure: false
+  script:
+    - echo "We will execute the integration tests"
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'

@@ -1,0 +1,267 @@
+/* /frontend/themes/store/layouts/main-layout.css */
+
+/* ... (tus estilos para .app-header, drawer, y .menu-link no cambian) ... */
+.app-header {
+  background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #87CEFA;
+  box-shadow: 0 0 8px #39FF14, 0 0 12px #39FF14;
+}
+.app-header h1, .app-header vaadin-button {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+vaadin-app-layout::part(drawer) {
+  background-image:
+    linear-gradient(to bottom, rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.9)),
+    url('https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  border-right: 3px solid #900C3F;
+  box-shadow: 2px 0 8px #FF4500, 3px 0 12px #FF4500;
+}
+.menu-links-container .menu-link {
+    display: block;
+    padding: 0.75em 1.5em;
+    margin: 0.25em 1em;
+    border-radius: var(--lumo-border-radius-l);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px #FFFFE0;
+    text-decoration: none;
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 0 5px #FEEA00;
+}
+.menu-links-container .menu-link span {
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 0 5px #FEEA00;
+}
+.menu-links-container .menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px #FFFFE0, 0 0 15px #FFFFE0;
+}
+.menu-links-container .menu-link:hover span {
+    text-shadow: 0 0 8px #FEEA00, 0 0 12px #FEEA00;
+}
+.grid-action-button {
+    background-image: none;
+    color: white !important;
+    font-weight: 600;
+    border-radius: var(--lumo-border-radius-m);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    line-height: 1;
+    height: var(--lumo-size-m);
+    font-size: var(--lumo-font-size-s);
+    border: 1px solid #87CEFA;
+    box-shadow: 0 0 6px #ADD8E6;
+    background-image: linear-gradient(to bottom, #4e8cff, #276ef2);
+}
+.grid-action-button.delete {
+    background-image: linear-gradient(to bottom, #ff6b6b, #ee4d4d);
+}
+.grid-action-button:hover {
+    box-shadow: 0 0 12px #ADD8E6, 0 0 16px #ADD8E6;
+}
+
+/* --- ESTILOS PARA LAS TABLAS (GRIDS) - VERSIÓN FINAL --- */
+
+/* Contenedor principal de la tabla */
+.styled-grid {
+    border: 1px solid #87CEFA;
+    box-shadow: 0 0 8px #ADD8E6;
+    border-radius: var(--lumo-border-radius-l);
+    overflow: hidden;
+}
+
+/* Cabecera de la tabla */
+.styled-grid::part(header-cell) {
+    background-image: linear-gradient(to bottom, #f0faff, #d6f0ff);
+    color: var(--lumo-primary-text-color);
+    font-weight: 600;
+}
+
+/* --- LA SOLUCIÓN DEFINITIVA PARA LAS FILAS --- */
+/* Apuntamos directamente a las celdas dentro de las filas */
+.styled-grid::part(cell) {
+    background-color: #E7E1EC; /* Color plomo claro sólido */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el ratón sobre una fila */
+.styled-grid::part(body-row):hover > [part~="cell"] {
+    background-color: #e9ecef; /* Un gris ligeramente más oscuro */
+}
+
+/* --- LA SOLUCIÓN DEFINITIVA PARA EL FOOTER Y EL CONTENIDO --- */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main-content-wrapper > :first-child {
+    flex-grow: 1;
+}
+.app-footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-image: linear-gradient(to left, #BDBDBD, #9E9E9E);
+    border-top: 3px solid #87CEFA;
+    box-shadow: 0 -2px 8px #39FF14, 0 -3px 12px #39FF14;
+    color: white;
+    font-size: var(--lumo-font-size-s);
+    text-shadow: 0 1px 2px black;
+}
+/* /frontend/themes/store/layouts/main-layout.css */
+
+/* ... (tus estilos para .app-header, drawer, y .menu-link no cambian) ... */
+.app-header {
+  background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #87CEFA;
+  box-shadow: 0 0 8px #39FF14, 0 0 12px #39FF14;
+}
+.app-header h1, .app-header vaadin-button {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+vaadin-app-layout::part(drawer) {
+  background-image:
+    linear-gradient(to bottom, rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.9)),
+    url('https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  border-right: 3px solid #900C3F;
+  box-shadow: 2px 0 8px #FF4500, 3px 0 12px #FF4500;
+}
+.menu-links-container .menu-link {
+    display: block;
+    padding: 0.75em 1.5em;
+    margin: 0.25em 1em;
+    border-radius: var(--lumo-border-radius-l);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px #FFFFE0;
+    text-decoration: none;
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 0 5px #FEEA00;
+}
+.menu-links-container .menu-link span {
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 0 5px #FEEA00;
+}
+.menu-links-container .menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px #FFFFE0, 0 0 15px #FFFFE0;
+}
+.menu-links-container .menu-link:hover span {
+    text-shadow: 0 0 8px #FEEA00, 0 0 12px #FEEA00;
+}
+.grid-action-button {
+    background-image: none;
+    color: white !important;
+    font-weight: 600;
+    border-radius: var(--lumo-border-radius-m);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    line-height: 1;
+    height: var(--lumo-size-m);
+    font-size: var(--lumo-font-size-s);
+    border: 1px solid #87CEFA;
+    box-shadow: 0 0 6px #ADD8E6;
+    background-image: linear-gradient(to bottom, #4e8cff, #276ef2);
+}
+.grid-action-button.delete {
+    background-image: linear-gradient(to bottom, #ff6b6b, #ee4d4d);
+}
+.grid-action-button:hover {
+    box-shadow: 0 0 12px #ADD8E6, 0 0 16px #ADD8E6;
+}
+
+/* --- ESTILOS PARA LAS TABLAS (GRIDS) - VERSIÓN FINAL --- */
+
+/* Contenedor principal de la tabla */
+.styled-grid {
+    border: 1px solid #87CEFA;
+    box-shadow: 0 0 8px #ADD8E6;
+    border-radius: var(--lumo-border-radius-l);
+    overflow: hidden;
+}
+
+/* Cabecera de la tabla */
+.styled-grid::part(header-cell) {
+    background-image: linear-gradient(to bottom, #f0faff, #d6f0ff);
+    color: var(--lumo-primary-text-color);
+    font-weight: 600;
+}
+
+/* --- LA SOLUCIÓN DEFINITIVA PARA LAS FILAS --- */
+/* Apuntamos directamente a las celdas dentro de las filas */
+.styled-grid::part(body-cell) {
+    /*background-color: #E7E1EC;*/ /* Color plomo claro sólido */
+    background-image: linear-gradient(to right, #E7E1EC, #FCFEFC);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el ratón sobre una fila */
+.styled-grid::part(body-row):hover > [part~="cell"] {
+    background-color: #e9ecef; /* Un gris ligeramente más oscuro */
+}
+
+/* --- LA SOLUCIÓN DEFINITIVA PARA EL FOOTER Y EL CONTENIDO --- */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main-content-wrapper > :first-child {
+    flex-grow: 1;
+}
+.app-footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-image: linear-gradient(to left, #BDBDBD, #9E9E9E);
+    border-top: 3px solid #87CEFA;
+    box-shadow: 0 -2px 4px #39FF14, 0 -3px 8px #39FF14;
+    color: white;
+    font-size: var(--lumo-font-size-s);
+    text-shadow: 0 1px 2px black;
+}
+
+/* --- ESTILOS PARA LOS BOTONES DE AÑADIR/CREAR --- */
+.add-button {
+    /* Quitamos estilos por defecto */
+    background-image: none;
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    border-radius: var(--lumo-border-radius-l);
+    transition: all 0.2s ease-in-out;
+
+    /* 1. Borde plomo claro */
+    border: 2px solid #D3D3D3; /* LightGray */
+
+    /* 2. Sombreado plomo */
+    box-shadow: 0 0 8px #A9A9A9; /* DarkGray */
+
+    /* 3. Gradiente naranja claro de izquierda a derecha */
+    background-image: linear-gradient(to right, #ffaf7b, #ff7e5f);
+
+}
+
+.add-button:hover {
+    box-shadow: 0 0 12px #A9A9A9, 0 0 16px #A9A9A9;
+    transform: translateY(-1px); /* Pequeño efecto de elevación */
+}

@@ -1,0 +1,55 @@
+/* /frontend/themes/store/views/dashboard-view.css */
+
+/* Estilo BASE para todas las tarjetas de KPI */
+.stat-card {
+    color: white;
+    border-radius: 12px;
+    padding: 1.5em 2em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+/* --- Colores específicos para cada tarjeta --- */
+
+/* Tarjeta 1: Degradado Verde/Azul Suave (para Ventas) */
+.stat-card-1 {
+    background-image: linear-gradient(to right, #2980b9, #6dd5fa);
+}
+
+/* Tarjeta 2: Degradado Púrpura Suave (para Transacciones) */
+.stat-card-2 {
+    background-image: linear-gradient(to right, #6a3093, #a044ff);
+}
+
+/* Tarjeta 3: Degradado Naranja/Amarillo Suave (para Stock) */
+.stat-card-3 {
+    background-image: linear-gradient(to right, #f2994a, #f2c94c);
+}
+
+
+/* Estilo para el título (ej: "Ventas Totales") */
+.stat-title {
+    font-size: var(--lumo-font-size-m);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Estilo para el valor (ej: "$1,234.56") */
+.stat-value {
+    font-size: var(--lumo-font-size-xxl);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Estilo para las tarjetas que contienen los gráficos */
+.chart-card {
+    background-color: var(--lumo-base-color);
+    border-radius: var(--lumo-border-radius-l);
+    box-shadow: var(--lumo-box-shadow-s);
+    padding: var(--lumo-space-l);
+    height: 100%;
+}

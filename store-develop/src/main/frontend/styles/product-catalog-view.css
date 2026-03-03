@@ -1,0 +1,15 @@
+/*
+  Define la cuadrícula para el catálogo de productos.
+  Esta clase se aplica al Div que contiene todas las tarjetas.
+*/
+.card-grid {
+    display: grid;
+    /*
+      Crea columnas que intentan tener 300px de ancho, pero se ajustan.
+      Esto hace que en pantallas muy pequeñas se vea 1 o 2 columnas en lugar de 3.
+      Es más "responsive".
+    */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+    padding: 1rem;
+}
